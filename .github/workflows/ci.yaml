@@ -20,4 +20,4 @@ jobs:
       - name: Set git tag
         run: |
           git tag alpha.1
-          git push upstream alpha.1 --no-verify
+          git push origin alpha.1 --no-verify
