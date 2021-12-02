@@ -1,0 +1,18 @@
+name: Test
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+      - name: Setup git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Set git tag
+        run: |
+          git tag alpha.1
+          git push upstream alpha.320 --no-verify
